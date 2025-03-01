@@ -109,12 +109,12 @@ export const mapFeatureFlagsEnvToState = (config: IFeatureFlags) => {
     enableKnowledgeBase: config.knowledge_base,
     enableRAGEval: config.rag_eval,
 
-    showCloudPromotion: config.cloud_promotion,
+    showCloudPromotion: false,
 
     showMarket: config.market,
     enableSTT: config.speech_to_text,
 
-    hideGitHub: config.commercial_hide_github,
-    hideDocs: config.commercial_hide_docs,
+    hideGitHub: true,
+    hideDocs: true,
   };
 };
