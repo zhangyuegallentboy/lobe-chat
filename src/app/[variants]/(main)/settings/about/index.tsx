@@ -9,15 +9,7 @@ import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
 import { BRANDING_NAME } from '@/const/branding';
-import {
-  BLOG,
-  DISCORD,
-  GITHUB,
-  MEDIDUM,
-  PRIVACY_URL,
-  TERMS_URL,
-  X,
-} from '@/const/url';
+import { BLOG, DISCORD, GITHUB, MEDIDUM, PRIVACY_URL, TERMS_URL, X } from '@/const/url';
 import { useServerConfigStore } from '@/store/serverConfig';
 import { serverConfigSelectors } from '@/store/serverConfig/selectors';
 
