@@ -115,6 +115,6 @@ export const mapFeatureFlagsEnvToState = (config: IFeatureFlags) => {
     enableSTT: config.speech_to_text,
 
     hideGitHub: true,
-    hideDocs: true,
+    hideDocs: false,
   };
 };
