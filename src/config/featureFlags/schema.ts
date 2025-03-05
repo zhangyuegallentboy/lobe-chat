@@ -86,7 +86,8 @@ export const DEFAULT_FEATURE_FLAGS: IFeatureFlags = {
 
 export const mapFeatureFlagsEnvToState = (config: IFeatureFlags) => {
   return {
-    enableWebrtc: config.webrtc_sync,
+    // enableWebrtc: config.webrtc_sync,
+    enableWebrtc: true,
     isAgentEditable: config.edit_agent,
 
     showCreateSession: config.create_session,
