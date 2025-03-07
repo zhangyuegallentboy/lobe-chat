@@ -1,9 +1,9 @@
 import {AgentState, initialAgentChatState} from './slices/chat/initialState';
 import {VoiceList} from "@lobehub/tts";
 
-export type SessionStoreState = AgentState;
+export type AgentStoreState = AgentState;
 
-export const initialState: SessionStoreState = {
+export const initialState: AgentStoreState = {
   ...initialAgentChatState,
 };
 
