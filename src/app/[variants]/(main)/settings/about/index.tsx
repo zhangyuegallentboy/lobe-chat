@@ -55,26 +55,26 @@ const Page = memo<{ mobile?: boolean }>(({ mobile }) => {
                 value: 'blog',
               },
               {
-                href: GITHUB,
+                href: SOCIAL_URL.github,
                 icon: SiGithub,
                 label: 'GitHub',
                 value: 'feedback',
               },
               {
-                href: DISCORD,
+                href: SOCIAL_URL.discord,
                 icon: SiDiscord,
                 label: 'Discord',
                 value: 'discord',
               },
               {
-                href: X,
+                href: SOCIAL_URL.x,
                 icon: SiX as any,
                 label: 'X / Twitter',
                 value: 'x',
               },
 
               {
-                href: MEDIDUM,
+                href: SOCIAL_URL.medium,
                 icon: SiMedium,
                 label: 'Medium',
                 value: 'medium',
