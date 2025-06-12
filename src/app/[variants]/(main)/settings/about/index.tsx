@@ -14,7 +14,6 @@ import { serverConfigSelectors } from '@/store/serverConfig/selectors';
 
 import AboutList from './features/AboutList';
 import Analytics from './features/Analytics';
-import ItemCard from './features/ItemCard';
 import ItemLink from './features/ItemLink';
 import Version from './features/Version';
 
