@@ -1,6 +1,5 @@
 'use client';
 
-import { SiDiscord, SiGithub, SiMedium, SiRss, SiX } from '@icons-pack/react-simple-icons';
 import { Form } from '@lobehub/ui';
 import { Divider } from 'antd';
 import { createStyles } from 'antd-style';
@@ -9,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
 import { BRANDING_NAME } from '@/const/branding';
-import { BLOG, DISCORD, GITHUB, MEDIDUM, PRIVACY_URL, TERMS_URL, X } from '@/const/url';
+import { PRIVACY_URL, TERMS_URL } from '@/const/url';
 import { useServerConfigStore } from '@/store/serverConfig';
 import { serverConfigSelectors } from '@/store/serverConfig/selectors';
 
@@ -44,43 +43,6 @@ const Page = memo<{ mobile?: boolean }>(({ mobile }) => {
           <Version mobile={mobile} />
           <Divider style={{ marginBlock: 0 }} />
           <div className={styles.title}>{t('information')}</div>
-          <AboutList
-            ItemRender={ItemCard}
-            grid
-            items={[
-              {
-                href: BLOG,
-                icon: SiRss,
-                label: t('blog'),
-                value: 'blog',
-              },
-              {
-                href: SOCIAL_URL.github,
-                icon: SiGithub,
-                label: 'GitHub',
-                value: 'feedback',
-              },
-              {
-                href: SOCIAL_URL.discord,
-                icon: SiDiscord,
-                label: 'Discord',
-                value: 'discord',
-              },
-              {
-                href: SOCIAL_URL.x,
-                icon: SiX as any,
-                label: 'X / Twitter',
-                value: 'x',
-              },
-
-              {
-                href: SOCIAL_URL.medium,
-                icon: SiMedium,
-                label: 'Medium',
-                value: 'medium',
-              },
-            ]}
-          />
           <Divider style={{ marginBlock: 0 }} />
           <div className={styles.title}>{t('legal')}</div>
           <AboutList
