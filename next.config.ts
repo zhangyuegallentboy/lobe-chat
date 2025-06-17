@@ -24,7 +24,6 @@ const nextConfig: NextConfig = {
   ...(isStandaloneMode ? standaloneConfig : {}),
   basePath,
   compress: isProd,
-  generateBuildId: () => process.env.BUILD_ID,
   experimental: {
     optimizePackageImports: [
       'emoji-mart',
@@ -205,18 +204,6 @@ const nextConfig: NextConfig = {
       asyncWebAssembly: true,
       layers: true,
     };
-    if (isProd && !dev) {
-      // 配置确定性的模块和chunk ID
-      config.optimization = {
-        ...config.optimization,
-        moduleIds: 'deterministic',
-        chunkIds: 'deterministic',
-      };
-      if (!isServer) {
-        config.output.filename = 'static/chunks/[name].js';
-        config.output.chunkFilename = 'static/chunks/[name].js';
-      }
-    }
     // 开启该插件会导致 pglite 的 fs bundler 被改表
     if (enableReactScan && !isUsePglite) {
       config.plugins.push(ReactComponentName({}));
