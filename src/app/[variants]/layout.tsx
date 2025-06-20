@@ -1,11 +1,9 @@
-import { SpeedInsights } from '@vercel/speed-insights/next';
 import { ThemeAppearance } from 'antd-style';
 import { ResolvingViewport } from 'next';
 import { NuqsAdapter } from 'nuqs/adapters/next/app';
 import { ReactNode } from 'react';
 import { isRtlLang } from 'rtl-detect';
 
-import Analytics from '@/components/Analytics';
 import { DEFAULT_LANG } from '@/const/locale';
 import { isDesktop } from '@/const/version';
 import PWAInstall from '@/features/PWAInstall';
@@ -14,8 +12,6 @@ import GlobalProvider from '@/layout/GlobalProvider';
 import { Locales } from '@/locales/resources';
 import { DynamicLayoutProps } from '@/types/next';
 import { RouteVariants } from '@/utils/server/routeVariants';
-
-const inVercel = process.env.VERCEL === '1';
 
 interface RootLayoutProps extends DynamicLayoutProps {
   children: ReactNode;
@@ -48,8 +44,6 @@ const RootLayout = async ({ children, params, modal }: RootLayoutProps) => {
             <PWAInstall />
           </GlobalProvider>
         </NuqsAdapter>
-        <Analytics />
-        {inVercel && <SpeedInsights />}
       </body>
     </html>
   );
